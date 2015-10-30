@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!--you create a variable under data tag which describe a property that
+        this variable will be user in this xml -->
+        <!--you are creating an object/variable of User so you provide its give it a name
+        and set its type-->
+        <!--here your packagename should be same under where user class is created-->
+        <variable
+            name="user"
+            type="com.app.android.databinding.DataModel.User"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}"
+            android:textAppearance="?android:textAppearanceLarge"/>
+
+        <!--in text attribute you are telling the XML use "user.name" to set text. -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.address}"
+            android:textAppearance="?android:textAppearanceMedium"/>
+    </LinearLayout>
+
+</layout>
